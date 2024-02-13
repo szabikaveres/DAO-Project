@@ -66,8 +66,8 @@ describe('Token', () => {
       })
 
       it('emits a Transfer event', async () => {
-        await expect(transaction).to.emit(token, 'Transfer').
-          withArgs(deployer.address, receiver.address, amount)
+        await expect(transaction).to.emit(token, 'Transfer')
+          .withArgs(deployer.address, receiver.address, amount)
       })
 
     })
@@ -78,7 +78,7 @@ describe('Token', () => {
         await expect(token.connect(deployer).transfer(receiver.address, invalidAmount)).to.be.reverted
       })
 
-      it('rejects invalid recipent', async () => {
+      it('rejects invalid recipient', async () => {
         const amount = tokens(100)
         await expect(token.connect(deployer).transfer('0x0000000000000000000000000000000000000000', amount)).to.be.reverted
       })
