@@ -5,8 +5,8 @@ import { ethers } from 'ethers'
 // Components
 import Navigation from './Navigation';
 import Proposals from './Proposals';
+import Create from './Create';
 import Loading from './Loading';
-
 
 // ABIs: Import your contract ABIs here
 import DAO_ABI from '../abis/DAO.json'
@@ -78,6 +78,12 @@ function App() {
         <Loading />
       ) : (
         <>
+          <Create 
+            provider = {provider}
+            dao = {dao}
+            setIsLoading={setIsLoading}
+          
+          />
           <hr/>
 
             <p className= 'text-center'><strong>Treasury Balance:</strong>{treasuryBalance} ETH </p>
