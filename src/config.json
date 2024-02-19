@@ -6,5 +6,13 @@
     "dao": {
       "address": "0xe84Bb035b1bDf7331290af2e3F2cD61c3d966Cd7"
     }
+  },
+  "11155111": {
+    "token": {
+      "address": "0x0a087456e897EC8a472c0B7A468Fe88d0C8C7aF2"
+    },
+    "dao": {
+      "address": "0xe84Bb035b1bDf7331290af2e3F2cD61c3d966Cd7"
+    }
   }
 }
