@@ -39,7 +39,6 @@ function App() {
     treasuryBalance = ethers.utils.formatUnits(treasuryBalance, 18)
     setTreasuryBalance(treasuryBalance)
 
-
     // Fetch accounts
     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
     const account = ethers.utils.getAddress(accounts[0])
@@ -82,20 +81,18 @@ function App() {
             provider = {provider}
             dao = {dao}
             setIsLoading={setIsLoading}
-          
           />
-          <hr/>
 
+          <hr/>
             <p className= 'text-center'><strong>Treasury Balance:</strong>{treasuryBalance} ETH </p>
           <hr/>
+
           <Proposals 
           provider= {provider}
           dao = {dao} 
           proposals = {proposals}
           quorum = {quorum}
           setIsLoading={setIsLoading}
-          
-
           />
         </>
       )}

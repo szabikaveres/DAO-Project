@@ -11,7 +11,6 @@ const Proposals = ({ provider, dao, proposals, quorum, setIsLoading}) => {
         } catch {
             window.alert('User rejected or transaction reverted')
         }
-
         setIsLoading(true)
     }
 
@@ -60,7 +59,6 @@ const Proposals = ({ provider, dao, proposals, quorum, setIsLoading}) => {
                             Vote
                         </Button>
                     )}
-
                 </td>
                 <td>
                     {!proposal.finalized && proposal.votes > quorum &&(
